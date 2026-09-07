@@ -104,3 +104,31 @@ if (cursorGlow && hasFinePointer && !prefersReducedMotion) {
   });
 }
 
+// Liquid Glass Interactive Specular & Rim-Light Tracking
+if (hasFinePointer && !prefersReducedMotion) {
+  const glassCards = document.querySelectorAll('.glass-card');
+  glassCards.forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    }, { passive: true });
+  });
+}
+
+// Dynamic Floating Glass Navigation on Scroll
+const nav = document.querySelector('.nav');
+if (nav) {
+  const updateNavGlass = () => {
+    if (window.scrollY > 15) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+  };
+  window.addEventListener('scroll', updateNavGlass, { passive: true });
+  updateNavGlass();
+}
+
