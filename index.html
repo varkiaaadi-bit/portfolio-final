@@ -12,6 +12,7 @@
 </head>
 <body>
   <div class="noise"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
   <header class="nav">
     <a class="logo" href="#home">AV<span>.</span></a>
     <nav>
@@ -21,7 +22,7 @@
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="mailto:varkiaaadi@gmail.com">Let's talk ↗</a>
+    <a class="nav-cta contact-cta" href="#contact">Let's talk ↗</a>
   </header>
 
   <main>
@@ -32,13 +33,40 @@
         <p class="hero-text">A B.Tech CSE student who enjoys turning ideas into practical digital experiences — from full-stack applications to data-driven solutions.</p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">Explore my work <span>↓</span></a>
-          <a class="button ghost" href="mailto:varkiaaadi@gmail.com">Get in touch ↗</a>
+          <a class="button contact-btn" href="#contact">Get in touch ↗</a>
         </div>
       </div>
       <div class="hero-card">
         <div class="card-grid"></div>
         <div class="orb"></div>
         <div class="hero-mark">AV</div>
+        
+        <!-- Professional Photo Component -->
+        <div class="hero-photo-frame" id="hero-photo-frame">
+          <div class="photo-glow"></div>
+          <img 
+            src="profile.jpg" 
+            alt="Aadi Varkia — Computer Science Student" 
+            class="hero-photo"
+            id="hero-photo"
+            loading="eager"
+            onerror="this.style.display='none'; const fb = document.getElementById('photo-fallback'); if(fb) fb.style.display='flex';"
+            onload="this.style.display='block'; const fb = document.getElementById('photo-fallback'); if(fb) fb.style.display='none';"
+          />
+          <div class="photo-fallback" id="photo-fallback">
+            <div class="fallback-monogram">AV</div>
+            <div class="fallback-badge">
+              <span class="pulse-dot"></span>
+              <span>profile.jpg</span>
+            </div>
+          </div>
+          <div class="photo-overlay"></div>
+          <div class="photo-caption">
+            <span class="caption-dot"></span>
+            <span>Aadi Varkia</span>
+          </div>
+        </div>
+
         <div class="floating-card fc-one"><small>CURRENTLY</small><strong>B.Tech CSE</strong><span>2025 — 2029</span></div>
         <div class="floating-card fc-two"><small>CGPA</small><strong>8.27</strong><span>out of 10</span></div>
         <div class="scroll-note">SCROLL TO EXPLORE ↓</div>
@@ -48,14 +76,48 @@
     <section id="about" class="section about">
       <div class="section-label">01 / ABOUT</div>
       <div class="about-content">
-        <h2>Curious by nature.<br><span>Driven to create.</span></h2>
-        <div class="about-copy">
-          <p>I’m Aadi Varkia, a Computer Science Engineering student at Lovely Professional University. I’m building a strong foundation across programming, web development, databases and problem solving.</p>
-          <p>I like learning by building. My project work has taken me from designing interfaces to working with APIs, databases, authentication and data visualization.</p>
+        <div class="about-lead">
+          <h2>Curious by nature.<br><span>Driven to create.</span></h2>
+          <div class="about-status">
+            <span class="status-pill"><span class="pulse-dot"></span> Open to Collaborations &amp; Opportunities</span>
+          </div>
           <div class="mini-stats">
-            <div><strong>8.27</strong><span>CGPA</span></div>
-            <div><strong>3+</strong><span>Languages</span></div>
+            <div><strong>8.27</strong><span>CGPA (LPU)</span></div>
+            <div><strong>150+</strong><span>Hrs Training</span></div>
             <div><strong>2</strong><span>Featured Projects</span></div>
+            <div><strong>3</strong><span>Service Drives</span></div>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="lead-p">I’m <strong>Aadi Varkia</strong>, a Computer Science &amp; Engineering undergraduate at <strong>Lovely Professional University</strong> (2025 — 2029). I believe in learning by building — turning theoretical concepts into dependable, high-performing digital solutions.</p>
+          <p>My core interests lie at the intersection of <strong>full-stack development, scalable database design, and algorithmic problem-solving</strong>. From crafting responsive user experiences to architecting asynchronous REST APIs, implementing Redis caching layers, and working with relational &amp; NoSQL data stores, I enjoy understanding every layer of software development.</p>
+          
+          <div class="about-grid">
+            <div class="about-card">
+              <span class="about-card-no">01</span>
+              <h4>Academic &amp; Technical Foundation</h4>
+              <p>Pursuing B.Tech CSE with an <strong>8.27 CGPA</strong>. Rigorous coursework in Database Management Systems (DBMS), Data Structures &amp; Algorithms (DSA), and programming fundamentals.</p>
+            </div>
+            <div class="about-card">
+              <span class="about-card-no">02</span>
+              <h4>What I’m Currently Exploring</h4>
+              <p>Advancing algorithmic optimization, experimenting with distributed system concepts, and mastering scalable modern web frameworks with clean code practices.</p>
+            </div>
+            <div class="about-card">
+              <span class="about-card-no">03</span>
+              <h4>Structured Training &amp; Certifications</h4>
+              <p>Completed <strong>150 hours of structured Computer Programming</strong> covering logical problem-solving, along with certified foundations in <strong>Python</strong> programming.</p>
+            </div>
+            <div class="about-card">
+              <span class="about-card-no">04</span>
+              <h4>Beyond the Terminal</h4>
+              <p>Active volunteer with <strong>Pathankot Vikas Manch</strong>, organizing three community welfare initiatives spanning food donation, health check-ups, and cleanliness campaigns.</p>
+            </div>
+          </div>
+
+          <div class="about-mission">
+            <span class="mission-label">Career Direction &amp; Vision</span>
+            <p>To grow as a versatile software engineer who builds dependable, scalable digital products that empower users and create meaningful community impact.</p>
           </div>
         </div>
       </div>
@@ -203,9 +265,9 @@
     </section>
 
     <section id="contact" class="contact">
-      <div class="section-label">07 / CONTACT</div>
+      <div class="section-label">09 / CONTACT</div>
       <h2>Have an idea?<br><em>Let's build it.</em></h2>
-      <a class="email-link" href="mailto:varkiaaadi@gmail.com">varkiaaadi@gmail.com ↗</a>
+      <a class="email-link contact-highlight-link" href="mailto:varkiaaadi@gmail.com">varkiaaadi@gmail.com ↗</a>
       <div class="contact-links">
         <a href="https://github.com/varkiaaadi-bit" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/aadi-varkia-a1b433368/" target="_blank" rel="noreferrer">LinkedIn</a>

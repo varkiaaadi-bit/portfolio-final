@@ -25,5 +25,6 @@ When prompted, select the project directory and deploy.
 
 ## Notes
 - This is a static site, so no build step is required.
+- **Profile Photo**: Place your photo as `profile.jpg` in the root directory to display your personal photo in the Hero section.
 - Update links or content directly in `index.html`.
 - The phone number has been set to +91 7973166221.
