@@ -110,7 +110,7 @@ if (cursorGlow && hasFinePointer && !prefersReducedMotion) {
 if (hasFinePointer && !prefersReducedMotion) {
   const glassCards = Array.from(document.querySelectorAll('.glass-card'));
   const navHeader = document.querySelector('.nav');
-  const contactButtons = document.querySelectorAll('.contact-cta, .button.contact-btn');
+  const contactButtons = document.querySelectorAll('.contact-cta, .button.contact-btn, .project-btn');
 
   // Track cards currently visible in the viewport using IntersectionObserver
   // This guarantees O(visible) instead of O(all) calculations per frame!
