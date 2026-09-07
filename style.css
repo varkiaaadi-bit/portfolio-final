@@ -237,7 +237,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 65%, rgba(255, 241, 244, 0.85) 100%);
+  background: linear-gradient(180deg, transparent 72%, rgba(0, 0, 0, 0.22) 100%);
   z-index: 3;
 }
 .photo-caption {
@@ -307,13 +307,59 @@
 
 /* Floating VisionOS Badges */
 .floating-card.glass-card {
+  position: absolute !important;
+  z-index: 5 !important;
+  width: auto !important;
+  min-width: 140px;
+  max-width: 190px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: var(--glass-blur-md);
   backdrop-filter: var(--glass-blur-md);
   border: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 1), 0 14px 30px rgba(18, 24, 38, 0.08);
-  z-index: 3;
+  padding: 14px 18px;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box;
+}
+
+.floating-card.fc-one {
+  left: 28px !important;
+  top: 30px !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+.floating-card.fc-two {
+  right: 28px !important;
+  bottom: 60px !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+.floating-card small {
+  font: 700 0.64rem var(--mono) !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent) !important;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.floating-card strong {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--text) !important;
+  line-height: 1.2;
+  margin: 1px 0 2px 0;
+  display: block;
+}
+
+.floating-card span {
+  font: 500 0.72rem var(--mono) !important;
+  color: var(--muted) !important;
+  display: block;
 }
 
 /* ==========================================================================
@@ -637,16 +683,18 @@ nav a.nav-contact-link::after {
     border-radius: 16px;
   }
   .floating-card.fc-one {
-    left: 12px;
-    top: 15px;
-    min-width: 120px;
-    padding: 10px 14px;
+    left: 14px !important;
+    top: 14px !important;
+    min-width: 110px !important;
+    max-width: 145px !important;
+    padding: 8px 12px !important;
   }
   .floating-card.fc-two {
-    right: 12px;
-    bottom: 35px;
-    min-width: 120px;
-    padding: 10px 14px;
+    right: 14px !important;
+    bottom: 24px !important;
+    min-width: 110px !important;
+    max-width: 145px !important;
+    padding: 8px 12px !important;
   }
   .about-grid {
     grid-template-columns: 1fr;
