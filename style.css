@@ -1,6 +1,8 @@
 :root{--bg:#0b0b0c;--surface:#111113;--line:#29292d;--text:#f1f0ec;--muted:#99999f;--accent:#c8ff43;--serif:Georgia,"Times New Roman",serif;--sans:Manrope,Arial,sans-serif;--mono:"DM Mono",monospace;--glass-bg:rgba(16,17,22,0.62);--glass-bg-hover:rgba(22,24,30,0.78);--glass-border:rgba(255,255,255,0.08);--glass-border-light:rgba(255,255,255,0.16);--glass-border-accent:rgba(200,255,67,0.45);--glass-inset:inset 0 1px 1px 0 rgba(255,255,255,0.14),inset 0 0 20px 0 rgba(255,255,255,0.015);--glass-shadow:0 18px 42px -12px rgba(0,0,0,0.68),0 0 1px 1px rgba(255,255,255,0.04);--glass-blur-sm:blur(14px) saturate(160%);--glass-blur-md:blur(22px) saturate(180%);--glass-blur-lg:blur(28px) saturate(190%)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
-.nav{height:74px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;background:rgba(11,11,14,0.65);-webkit-backdrop-filter:var(--glass-blur-lg);backdrop-filter:var(--glass-blur-lg);box-shadow:0 10px 30px -10px rgba(0,0,0,0.55),inset 0 -1px 0 rgba(255,255,255,0.04);z-index:100;transition:all .3s cubic-bezier(0.16,1,0.3,1)}.nav.nav-scrolled{background:rgba(10,10,13,0.85);border-bottom-color:rgba(255,255,255,0.12);box-shadow:0 16px 36px -6px rgba(0,0,0,0.75),inset 0 -1px 0 rgba(255,255,255,0.07)}.logo{font-weight:800;font-size:1.35rem;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}nav{display:flex;gap:30px}nav a,.nav-cta{font:500 .78rem var(--mono);text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.2s}nav a:hover,.nav-cta:hover{color:var(--accent)}.nav-cta{border:1px solid var(--line);padding:10px 15px;color:var(--text)}
+.nav{height:74px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;background:rgba(11,11,14,0.68);-webkit-backdrop-filter:var(--glass-blur-lg);backdrop-filter:var(--glass-blur-lg);box-shadow:0 10px 30px -10px rgba(0,0,0,0.55),inset 0 -1px 0 rgba(255,255,255,0.04);z-index:100;transition:all .3s cubic-bezier(0.16,1,0.3,1);position:sticky;overflow:hidden}
+.nav::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1.5px;background:radial-gradient(280px circle at var(--nav-mouse-x, -500px) 100%,rgba(255,255,255,0.95) 0%,rgba(200,255,67,0.85) 30%,rgba(125,235,255,0.4) 60%,transparent 100%);pointer-events:none;z-index:10;opacity:var(--nav-light-opacity, 0);transition:opacity .35s ease}
+.nav.nav-scrolled{background:rgba(10,10,13,0.88);border-bottom-color:rgba(255,255,255,0.14);box-shadow:0 16px 36px -6px rgba(0,0,0,0.75),inset 0 -1px 0 rgba(255,255,255,0.08)}.logo{font-weight:800;font-size:1.35rem;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}nav{display:flex;gap:30px}nav a,.nav-cta{font:500 .78rem var(--mono);text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.2s}nav a:hover,.nav-cta:hover{color:var(--accent)}.nav-cta{border:1px solid var(--line);padding:10px 15px;color:var(--text)}
 .hero{min-height:calc(100vh - 78px);display:grid;grid-template-columns:1.08fr .92fr;align-items:center;padding:7vw 6vw;gap:7vw;border-bottom:1px solid var(--line)}.eyebrow,.section-label,.project-top,.floating-card small,.skill-no,.impact span,.extra article>span,.timeline .date{font:500 .68rem var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.eyebrow{display:flex;align-items:center;gap:10px}.dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 15px var(--accent)}h1{font-size:clamp(3.6rem,7.2vw,7.4rem);line-height:.92;letter-spacing:-.06em;margin:24px 0 30px;font-weight:700}h1 em,h2 em{font-family:var(--serif);font-weight:400;color:var(--accent)}h1 span,h2 span{color:var(--muted)}.hero-text{max-width:600px;color:#b8b8bd;font-size:1.02rem}.hero-actions{display:flex;gap:12px;margin-top:32px}.button{display:inline-flex;gap:24px;align-items:center;padding:14px 18px;text-decoration:none;font-weight:700;font-size:.82rem}.primary{background:var(--accent);color:#0b0b0c}.ghost{border:1px solid var(--line);color:var(--text)}.hero-card{height:570px;position:relative;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 42%,#30321e 0,#151613 28%,#0e0e0f 64%)}.card-grid{position:absolute;inset:0;opacity:.35;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:55px 55px}.orb{position:absolute;width:330px;height:330px;border:1px solid rgba(200,255,67,.4);border-radius:50%;left:50%;top:42%;transform:translate(-50%,-50%);box-shadow:0 0 90px rgba(200,255,67,.09)}.orb:before,.orb:after{content:"";position:absolute;border:1px solid rgba(200,255,67,.2);border-radius:50%;inset:28px}.orb:after{inset:70px}.hero-mark{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font-size:8rem;font-weight:800;letter-spacing:-.1em;color:rgba(241,240,236,.08)}.floating-card{position:absolute;background:rgba(12,12,13,.88);border:1px solid #353539;padding:15px 18px;display:flex;flex-direction:column;min-width:150px;backdrop-filter:blur(10px)}.floating-card strong{font-size:1rem;margin-top:5px}.floating-card span{font-size:.72rem;color:var(--muted)}.fc-one{left:25px;top:30px}.fc-two{right:25px;bottom:65px}.scroll-note{position:absolute;bottom:22px;left:25px;font:500 .62rem var(--mono);color:var(--muted)}
 .section{padding:115px 6vw;border-bottom:1px solid var(--line)}.section-label{margin-bottom:65px;color:var(--accent)}.about-content{display:grid;grid-template-columns:1fr 1fr;gap:9vw}.about h2,.section-heading h2{font-size:clamp(2.8rem,5vw,5.3rem);line-height:1;letter-spacing:-.055em;margin:0}.about-copy{max-width:620px;color:#b8b8bd}.about-copy p{font-size:1.03rem;margin:0 0 24px}.mini-stats{display:flex;gap:45px;border-top:1px solid var(--line);margin-top:40px;padding-top:25px}.mini-stats div{display:flex;flex-direction:column}.mini-stats strong{font-size:1.8rem}.mini-stats span{font:500 .62rem var(--mono);color:var(--muted);text-transform:uppercase}
 .section-heading{margin-bottom:60px}.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.skill-grid article{padding:34px 28px;min-height:190px;border-radius:18px}.skill-grid h3{font-size:1.25rem;margin:30px 0 12px}.skill-grid p{color:var(--muted);margin:0}.skill-no{color:var(--accent)}
@@ -48,75 +50,126 @@
 }
 
 /* ==========================================================================
-   Apple-Inspired Liquid Glass Visual System
+   Apple-Inspired Dynamic Liquid Glass Material System
    ========================================================================== */
 .glass-card {
+  --light-x: 50%;
+  --light-y: 50%;
+  --light-angle: 135deg;
+  --light-intensity: 0;
+  --border-intensity: 0.15;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-z: 0px;
+
   position: relative;
-  background: var(--glass-bg);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-inset), var(--glass-shadow);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s ease,
-              border-color 0.35s ease,
-              background 0.35s ease;
+  background: radial-gradient(
+    140% 140% at var(--light-x) var(--light-y),
+    rgba(28, 30, 38, calc(0.6 + var(--light-intensity) * 0.16)) 0%,
+    rgba(14, 15, 19, 0.72) 65%,
+    rgba(9, 10, 12, 0.82) 100%
+  );
+  -webkit-backdrop-filter: blur(24px) saturate(190%) brightness(104%);
+  backdrop-filter: blur(24px) saturate(190%) brightness(104%);
+  border: 1px solid rgba(255, 255, 255, calc(0.06 + var(--border-intensity) * 0.14));
+  border-radius: 18px;
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, calc(0.18 + var(--border-intensity) * 0.35)),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.45),
+    inset 1.5px 0 2px rgba(255, 255, 255, calc(0.04 + var(--border-intensity) * 0.1)),
+    inset -1.5px 0 2px rgba(0, 0, 0, 0.25),
+    0 18px 45px -12px rgba(0, 0, 0, 0.75),
+    0 0 calc(var(--light-intensity) * 36px) rgba(200, 255, 67, calc(var(--light-intensity) * 0.18));
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateZ(var(--tilt-z));
+  transform-style: preserve-3d;
+  transition:
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
   overflow: hidden;
+  will-change: transform;
 }
 
-/* Liquid Refraction: Subsurface specular sheen following cursor */
+/* Ensure all content elements sit in crisp optical suspension above caustics */
+.glass-card > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* Liquid Refraction: Subsurface dynamic caustic sweep & chromatic dispersion */
 .glass-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(
-    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(200, 255, 67, 0.075) 0%,
-    rgba(255, 255, 255, 0.025) 40%,
-    transparent 75%
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  background:
+    /* Dynamic Anamorphic Caustic Light Wave sweeping according to incident light angle */
+    linear-gradient(
+      calc(var(--light-angle) + 90deg),
+      rgba(200, 255, 67, calc(0.13 * var(--light-intensity))) 0%,
+      rgba(125, 235, 255, calc(0.09 * var(--light-intensity))) 25%,
+      transparent 65%
+    ),
+    /* Deep Internal Caustic Spotlight following the light coordinates */
+    radial-gradient(
+      440px circle at var(--light-x) var(--light-y),
+      rgba(255, 255, 255, calc(0.25 * var(--light-intensity))) 0%,
+      rgba(200, 255, 67, calc(0.18 * var(--light-intensity))) 22%,
+      rgba(130, 230, 255, calc(0.06 * var(--light-intensity))) 45%,
+      transparent 75%
+    );
+  opacity: 1;
   pointer-events: none;
   z-index: 1;
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
 }
 
-/* Liquid Edge: Dynamic rim-light refraction on borders */
+/* Liquid Edge: Total Internal Reflection & dynamic prismatic bevel catch-light */
 .glass-card::after {
   content: "";
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  padding: 1px;
-  background: radial-gradient(
-    340px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(200, 255, 67, 0.5) 0%,
-    rgba(255, 255, 255, 0.2) 35%,
-    transparent 70%
-  );
+  padding: 1.2px;
+  background:
+    /* Intense specular spot right at the point closest to the cursor */
+    radial-gradient(
+      280px circle at var(--light-x) var(--light-y),
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(200, 255, 67, 0.85) 28%,
+      rgba(125, 235, 255, 0.45) 50%,
+      transparent 75%
+    ),
+    /* Dynamic conic refraction framing the edge towards the light */
+    conic-gradient(
+      from var(--light-angle) at var(--light-x) var(--light-y),
+      rgba(200, 255, 67, 0.7) 0deg,
+      rgba(255, 255, 255, 0.85) 35deg,
+      rgba(120, 240, 255, 0.6) 70deg,
+      transparent 120deg,
+      transparent 240deg,
+      rgba(200, 255, 67, 0.4) 330deg,
+      rgba(200, 255, 67, 0.7) 360deg
+    );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  opacity: var(--border-intensity);
   pointer-events: none;
   z-index: 2;
+  transition: opacity 0.25s ease;
 }
 
-/* Premium Apple-style micro-lift on hover */
 .glass-card:hover {
-  transform: translateY(-3px) scale(1.008);
-  background: var(--glass-bg-hover);
-  border-color: var(--glass-border-light);
-  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.24),
-              0 24px 50px -10px rgba(0, 0, 0, 0.78),
-              0 0 25px rgba(200, 255, 67, 0.06);
-}
-.glass-card:hover::before,
-.glass-card:hover::after {
-  opacity: 1;
+  border-color: rgba(200, 255, 67, 0.35);
+  box-shadow:
+    inset 0 1.5px 2.5px rgba(255, 255, 255, 0.55),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.45),
+    0 26px 55px -12px rgba(0, 0, 0, 0.82),
+    0 0 35px rgba(200, 255, 67, 0.16);
 }
 
 /* ==========================================================================
@@ -126,7 +179,6 @@
   position: absolute;
   left: 50%;
   top: 43%;
-  transform: translate(-50%, -50%);
   width: 250px;
   height: 320px;
   border-radius: 22px;
@@ -143,14 +195,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
-.hero-photo-frame:hover {
-  transform: translate(-50%, -53%) scale(1.02);
+.hero-photo-frame.glass-card {
+  transform: translate(-50%, -50%) perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateZ(var(--tilt-z));
+}
+.hero-photo-frame.glass-card:hover {
+  transform: translate(-50%, -52%) perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateZ(calc(var(--tilt-z) + 8px)) scale(1.015);
   border-color: rgba(200, 255, 67, 0.65);
-  box-shadow: inset 0 1.5px 2.5px rgba(255, 255, 255, 0.5),
+  box-shadow: inset 0 1.5px 2.5px rgba(255, 255, 255, 0.55),
               0 30px 70px rgba(0, 0, 0, 0.85),
               0 0 50px rgba(200, 255, 67, 0.25);
+}
+.hero-photo-frame .hero-photo {
+  transform: translate3d(calc(var(--tilt-y) * -0.8), calc(var(--tilt-x) * 0.8), 0);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hero-photo {
   width: 100%;
@@ -362,20 +421,35 @@
 /* Project Feature Glass Card Overrides */
 .project-feature.glass-card {
   border-radius: 24px;
-  background: rgba(14, 15, 19, 0.65);
+  background: radial-gradient(
+    140% 140% at var(--light-x, 50%) var(--light-y, 50%),
+    rgba(28, 30, 38, calc(0.64 + var(--light-intensity, 0) * 0.16)) 0%,
+    rgba(14, 15, 19, 0.76) 65%,
+    rgba(9, 10, 12, 0.86) 100%
+  );
   -webkit-backdrop-filter: var(--glass-blur-lg);
   backdrop-filter: var(--glass-blur-lg);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.16),
+  border: 1px solid rgba(255, 255, 255, calc(0.06 + var(--border-intensity, 0.15) * 0.14));
+  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, calc(0.18 + var(--border-intensity, 0.15) * 0.35)),
               inset 0 0 45px rgba(255, 255, 255, 0.01),
-              0 25px 50px -15px rgba(0, 0, 0, 0.7);
+              0 25px 50px -15px rgba(0, 0, 0, 0.75),
+              0 0 calc(var(--light-intensity, 0) * 45px) rgba(200, 255, 67, calc(var(--light-intensity, 0) * 0.14));
 }
 .project-feature.glass-card:hover {
-  transform: translateY(-3px) scale(1.004);
+  border-color: rgba(200, 255, 67, 0.35);
 }
 .project-feature * {
   position: relative;
   z-index: 3;
+}
+
+/* Glass Reveal Integration */
+.reveal.glass-card:not(.visible) {
+  opacity: 0;
+  transform: translateY(24px) !important;
+}
+.reveal.glass-card.visible {
+  opacity: 1;
 }
 
 /* Glass Tag / Pills */
@@ -428,6 +502,20 @@
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
   animation: contactBtnPulse 3.5s infinite ease-in-out;
 }
+.contact-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 90px at var(--btn-x, 50%) var(--btn-y, 50%),
+    rgba(255, 255, 255, 0.75) 0%,
+    transparent 75%
+  );
+  pointer-events: none;
+  opacity: var(--btn-sheen, 0);
+  transition: opacity 0.25s ease;
+  mix-blend-mode: overlay;
+}
 .contact-cta:hover {
   background: linear-gradient(135deg, #d8ff68, #c4ff36) !important;
   color: #050604 !important;
@@ -466,8 +554,24 @@ nav a.nav-contact-link::after {
               0 0 22px rgba(200, 255, 67, 0.18),
               0 10px 25px rgba(0, 0, 0, 0.4) !important;
   border-radius: 8px !important;
+  position: relative;
+  overflow: hidden;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   animation: contactPulse 3.5s infinite ease-in-out;
+}
+.button.contact-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 100px at var(--btn-x, 50%) var(--btn-y, 50%),
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(200, 255, 67, 0.25) 40%,
+    transparent 80%
+  );
+  pointer-events: none;
+  opacity: var(--btn-sheen, 0);
+  transition: opacity 0.25s ease;
 }
 .button.contact-btn:hover {
   background: var(--accent) !important;
