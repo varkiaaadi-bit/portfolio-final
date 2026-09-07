@@ -269,27 +269,51 @@
 /* ==========================================================================
    Prominent Contact Button & Link Treatments
    ========================================================================== */
+/* Top Home Page Contact CTA Button */
 .contact-cta {
-  border: 1px solid var(--accent) !important;
-  color: var(--accent) !important;
-  background: rgba(200, 255, 67, 0.08) !important;
-  box-shadow: 0 0 16px rgba(200, 255, 67, 0.18);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: contactPulse 3.5s infinite ease-in-out;
-}
-.contact-cta:hover {
   background: var(--accent) !important;
   color: #0b0b0c !important;
-  box-shadow: 0 0 28px rgba(200, 255, 67, 0.5);
-  transform: translateY(-2px);
+  font-weight: 800 !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: 0 0 20px rgba(200, 255, 67, 0.45), 0 0 45px rgba(200, 255, 67, 0.2) !important;
+  padding: 10px 18px !important;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: contactBtnPulse 3s infinite ease-in-out;
 }
+.contact-cta:hover {
+  background: #d8ff66 !important;
+  color: #0b0b0c !important;
+  box-shadow: 0 0 35px rgba(200, 255, 67, 0.7), 0 0 60px rgba(200, 255, 67, 0.35) !important;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Nav Menu Contact Link */
+nav a.nav-contact-link {
+  color: var(--accent) !important;
+  font-weight: 700;
+  position: relative;
+}
+nav a.nav-contact-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--accent);
+}
+
 .button.contact-btn {
   border: 1px solid var(--accent);
   color: var(--accent);
-  background: rgba(200, 255, 67, 0.08);
-  box-shadow: 0 0 20px rgba(200, 255, 67, 0.18);
+  background: rgba(200, 255, 67, 0.1);
+  box-shadow: 0 0 22px rgba(200, 255, 67, 0.22);
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -298,8 +322,16 @@
 .button.contact-btn:hover {
   background: var(--accent);
   color: #0b0b0c;
-  box-shadow: 0 0 32px rgba(200, 255, 67, 0.48);
+  box-shadow: 0 0 35px rgba(200, 255, 67, 0.55);
   transform: translateY(-2px);
+}
+@keyframes contactBtnPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(200, 255, 67, 0.4), 0 0 40px rgba(200, 255, 67, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(200, 255, 67, 0.65), 0 0 55px rgba(200, 255, 67, 0.3);
+  }
 }
 @keyframes contactPulse {
   0%, 100% {
